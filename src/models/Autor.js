@@ -8,6 +8,7 @@ const autorSchema = new mongoose.Schema(
   },
   {
     versionKey: false,
+    collection: 'autores',
   },
 )
 
