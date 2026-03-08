@@ -49,7 +49,7 @@ class AutorController {
 
       res.status(200).send({ message: 'Autor atualizado com sucesso' })
     } catch (erro) {
-      next(erro)
+      next(new NaoEncontrado('Id do Autor não localizado.'))
     }
   }
 
@@ -61,7 +61,7 @@ class AutorController {
 
       res.status(200).send({ message: 'Autor removido com sucesso' })
     } catch (erro) {
-      next(erro)
+      next(new NaoEncontrado('Id do Autor não localizado.'))
     }
   }
 }
